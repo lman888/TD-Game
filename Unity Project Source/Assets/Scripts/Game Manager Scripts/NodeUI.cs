@@ -30,7 +30,16 @@ public class NodeUI : MonoBehaviour
             m_upgradeButton.interactable = false;
         }
 
-        m_sellAmount.text = "$" + m_target.m_turretBluePrint.GetSellAmount();
+        if (!m_target.m_isUpgraded)
+        {
+            m_sellAmount.text = "$" + m_target.m_turretBluePrint.GetSellAmount();
+        }
+        else if(m_target.m_isUpgraded)
+        {
+            m_sellAmount.text = "$" + m_target.m_turretBluePrint.GetUpgradedSellAmount();
+        }
+
+
         m_ui.SetActive(true);
     }
 
