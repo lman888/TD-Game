@@ -28,6 +28,7 @@ public class Turret : MonoBehaviour
     public Transform m_firePoint;
     public Transform m_partToRotate;
     public float m_turnSpeed = 10.0f;
+    public Animation m_shootAnim;
 
     private void Start()
     {
@@ -99,6 +100,7 @@ public class Turret : MonoBehaviour
         {
             if (m_fireCountDown <= 0)
             {
+                m_shootAnim.Play();
                 Shoot();
                 m_fireCountDown = 1f / m_fireRate;
             }
