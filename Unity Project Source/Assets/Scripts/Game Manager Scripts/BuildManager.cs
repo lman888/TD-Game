@@ -7,6 +7,8 @@ public class BuildManager : MonoBehaviour
     public GameObject m_buildEffect;
     public GameObject m_sellEffect;
 
+    public Vector3 m_offset;
+
     private TurretBluePrint m_turretToBuild;
     private Node m_selectedNode;
 
@@ -65,6 +67,11 @@ public class BuildManager : MonoBehaviour
     public TurretBluePrint GetTurretToBuild()
     {
         return m_turretToBuild;
+    }
+
+    public Vector3 GetOffset()
+    {
+        return m_offset;
     }
 
 }
