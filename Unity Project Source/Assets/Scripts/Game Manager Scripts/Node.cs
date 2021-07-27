@@ -5,7 +5,6 @@ public class Node : MonoBehaviour
 {
     public Color m_hoverColor;
     public Color m_notEnoughMoneyColor;
-    public Vector3 m_offset;
 
     [HideInInspector]
     public GameObject m_turret;
@@ -29,7 +28,7 @@ public class Node : MonoBehaviour
     public Vector3 GetBuildPos()
     {
         /* Sets where the turret is built */
-        return transform.position + m_offset;
+        return transform.position + m_buildManager.GetOffset();
     }
 
     /* Functionality of building a Turret */
