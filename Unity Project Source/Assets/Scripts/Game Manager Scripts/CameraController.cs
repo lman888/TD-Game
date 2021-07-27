@@ -8,6 +8,8 @@ public class CameraController : MonoBehaviour
     public float m_panBorderThickness = 10.0f;
     public float m_scrollSpeed;
 
+    public Vector3 m_minClampPos;
+    public Vector3 m_maxClampPos;
     public float m_minY = 5.0f;
     public float m_maxY = 15.0f;
 
@@ -20,7 +22,6 @@ public class CameraController : MonoBehaviour
             this.enabled = false;
             return;
         }
-        
 
         if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - m_panBorderThickness)
         {
@@ -38,12 +39,14 @@ public class CameraController : MonoBehaviour
         {
             transform.Translate(Vector3.right * m_panSpeed * Time.deltaTime, Space.World);
         }
-
+            
         float m_scroll = Input.GetAxis("Mouse ScrollWheel");
 
         Vector3 pos = transform.position;
         pos.y -= m_scroll * 100 * m_scrollSpeed * Time.deltaTime;
+        pos.x = Mathf.Clamp(pos.x, m_minClampPos.x, m_maxClampPos.x);
         pos.y = Mathf.Clamp(pos.y, m_minY, m_maxY);
+        pos.z = Mathf.Clamp(pos.z, m_minClampPos.z, m_maxClampPos.z);
         transform.position = pos;
 
     }
