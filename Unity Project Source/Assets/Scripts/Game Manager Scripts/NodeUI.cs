@@ -17,11 +17,11 @@ public class NodeUI : MonoBehaviour
     {
         m_target = a_node;
 
-        transform.position = m_target.GetBuildPos();
+        transform.position = m_target.GetBuildPosition();
 
         if (!m_target.m_isUpgraded)
         {
-            m_upgradeCost.text = "$" + m_target.m_turretBluePrint.m_upgradeCost;
+            
             m_upgradeButton.interactable = true;
         }
         else
@@ -32,13 +32,12 @@ public class NodeUI : MonoBehaviour
 
         if (!m_target.m_isUpgraded)
         {
-            m_sellAmount.text = "$" + m_target.m_turretBluePrint.GetSellAmount();
+            //m_sellAmount.text = "$" + m_target.m_turretBluePrint.GetSellAmount();
         }
         else if(m_target.m_isUpgraded)
         {
-            m_sellAmount.text = "$" + m_target.m_turretBluePrint.GetUpgradedSellAmount();
+            //m_sellAmount.text = "$" + m_target.m_turretBluePrint.GetUpgradedSellAmount();
         }
-
 
         m_ui.SetActive(true);
     }
@@ -50,8 +49,8 @@ public class NodeUI : MonoBehaviour
 
     public void Upgrade()
     {
-        /* Initiates the TUrret Upgrade */
-        m_target.UpgradeTurret();
+        /* Initiates the Turret Upgrade */
+        BuildManager.s_instance.UpgradeTurret(m_target);
 
         /* Closes the UI right after the Upgrade */
         BuildManager.s_instance.DeSelectNode();
@@ -59,7 +58,7 @@ public class NodeUI : MonoBehaviour
 
     public void Sell()
     {
-        m_target.SellTurret();
+        BuildManager.s_instance.SellTurret(m_target);
         m_target.m_isUpgraded = false;
         BuildManager.s_instance.DeSelectNode();
     }

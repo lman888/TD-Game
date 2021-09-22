@@ -3,12 +3,13 @@
 public class Bullet : MonoBehaviour
 {
 
-    private Transform m_target;
     public float m_speed = 70.0f;
     public float m_explosionRadius = 0.0f;
     public GameObject m_impactEffect;
 
     public int m_damage = 20;
+
+    private Transform m_target;
 
     public void Seek(Transform a_target)
     {
@@ -27,6 +28,11 @@ public class Bullet : MonoBehaviour
         Vector3 dir = m_target.position - transform.position;
         float distanceThisFrame = m_speed * Time.deltaTime;
 
+        /* Potentially use Collisions (Collisions are a bit finicky so care) */
+        /* Using Distance calculations are more reliable but costs more performance */
+
+        /* Look up Square Mag and use that potentially instead */
+
         if (dir.magnitude <= distanceThisFrame)
         {
             HitTarget();
@@ -34,7 +40,6 @@ public class Bullet : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-        //transform.LookAt(m_target);
 
     }
 

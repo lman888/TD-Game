@@ -52,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -95,4 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 70
+  m_explosionRadius: 0
   m_impactEffect: {fileID: 7785069085868812388, guid: 2ff9fa4406a0c1e418cf2b706bfc8225, type: 3}
+  m_damage: 10

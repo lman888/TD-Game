@@ -6,7 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
     /* Only one instance to this variable */
     public static int m_money;
-    public int m_startingMoney = 400;
+    public int m_startingMoney = 999999;
 
     public static int m_lives;
     public int m_startLives = 20;
