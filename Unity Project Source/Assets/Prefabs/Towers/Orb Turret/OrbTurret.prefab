@@ -352,6 +352,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1602818632064589148}
+  - component: {fileID: 898970482}
+  - component: {fileID: 8483722793543972174}
   m_Layer: 0
   m_Name: part_to_rotate
   m_TagString: Untagged
@@ -374,6 +376,37 @@ Transform:
   m_Father: {fileID: 1386824035827323263}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &898970482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341020903596924493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61415807ca10d642b7d884cf66d001d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &8483722793543972174
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3341020903596924493}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4417685726057615103
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1386824035827323263
 Transform:
   m_ObjectHideFlags: 0
@@ -452,7 +485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6585601106694614249
 Transform:
   m_ObjectHideFlags: 0
@@ -645,6 +678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6585601108151812579}
+  - component: {fileID: 1973909985}
   m_Layer: 0
   m_Name: part_to_rotate
   m_TagString: Untagged
@@ -667,6 +701,18 @@ Transform:
   m_Father: {fileID: 6585601106694614249}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1973909985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585601108151812578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61415807ca10d642b7d884cf66d001d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6585601108505893463
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +772,7 @@ MonoBehaviour:
   m_firePoint: {fileID: 6585601106634894850}
   m_partToRotate: {fileID: 6585601108151812579}
   m_turnSpeed: 10
-  m_shootAnim: {fileID: 6585601108552556386}
+  m_shootAnim: {fileID: 8152895791733845479}
   m_isOrbLauncher: 0
   _turretSettings: {fileID: 11400000, guid: 0ef08e8847b50e14591b7cb870779427, type: 2}
   _models:

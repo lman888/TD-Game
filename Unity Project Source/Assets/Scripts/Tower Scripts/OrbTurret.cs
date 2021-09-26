@@ -36,10 +36,6 @@ public class OrbTurret : MonoBehaviour
     [SerializeField]
     private Transform m_firePoint;
     [SerializeField]
-    private Transform m_partToRotate;
-    [SerializeField]
-    private float m_turnSpeed = 10.0f;
-    [SerializeField]
     private Animation m_shootAnim;
     public bool m_isOrbLauncher;
 
@@ -144,7 +140,6 @@ public class OrbTurret : MonoBehaviour
         }
 
         UpdateTarget();
-        LockOnTarget();
         
         if (m_useLaser)
         {
@@ -226,13 +221,7 @@ public class OrbTurret : MonoBehaviour
         }
 
         m_fireCountDown -= Time.deltaTime;
-    }    void LockOnTarget()
-    {
-        Vector3 m_dir = m_target.position - transform.position;
-        Quaternion m_lookRot = Quaternion.LookRotation(m_dir);
-        Vector3 m_rotation = Quaternion.Lerp(m_partToRotate.rotation, m_lookRot, Time.deltaTime * m_turnSpeed).eulerAngles;
-        m_partToRotate.rotation = Quaternion.Euler(0.0f, m_rotation.y, 0.0f);
-    }
+    }    
 
     private void Shoot()
     {
