@@ -5,7 +5,7 @@ public class Node : MonoBehaviour
 {
     [HideInInspector] public bool _turretPlaced;
     [HideInInspector] public TurretBluePrint _turretBluePrint;
-    [HideInInspector] public bool m_isUpgraded = false;
+    //[HideInInspector] public bool m_isUpgraded = false;
 
     [SerializeField] private Transform _placementSpot;
     [SerializeField] private string _selectableTag = "BuildableSpot";

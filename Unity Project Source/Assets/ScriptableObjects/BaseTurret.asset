@@ -18,6 +18,10 @@ MonoBehaviour:
     ShootSpeed: 1
     SlowPower: 0
   - Level: 1
-    Damage: 100
+    Damage: 30
     ShootSpeed: 2
+    SlowPower: 0
+  - Level: 1
+    Damage: 50
+    ShootSpeed: 3
     SlowPower: 0

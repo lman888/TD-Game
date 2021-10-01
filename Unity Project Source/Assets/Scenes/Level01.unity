@@ -10385,19 +10385,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_standardTurret:
     m_prefab: {fileID: 6585601108505893463, guid: f0f411fb96519014197e4314ae1c6656, type: 3}
-    m_cost: 100
-    m_upgradedPrefab: {fileID: 1751312188657963188, guid: cabe44bdc18570841936ec39906be50c, type: 3}
-    m_upgradeCost: 70
+    m_cost: 75
+    _upgradeOneCost: 150
+    _upgradeTwoCost: 200
   m_missileTurret:
-    m_prefab: {fileID: 8363758792608383769}
-    m_cost: 250
-    m_upgradedPrefab: {fileID: 4510321144084057954, guid: 759d355b05162df438c2c85c7363bfec, type: 3}
-    m_upgradeCost: 150
+    m_prefab: {fileID: 3787555271359162002, guid: 56ec781d779dfdd4b88d37cc8dca28fa, type: 3}
+    m_cost: 125
+    _upgradeOneCost: 260
+    _upgradeTwoCost: 400
   m_laserTurret:
-    m_prefab: {fileID: 2041044827}
-    m_cost: 350
-    m_upgradedPrefab: {fileID: 5789020466809248791, guid: e2b101386f7d44a4b98c2f865cde0286, type: 3}
-    m_upgradeCost: 200
+    m_prefab: {fileID: 2398414005771442853, guid: 8fee22e871de11344aaf6cf9b0401e98, type: 3}
+    m_cost: 155
+    _upgradeOneCost: 250
+    _upgradeTwoCost: 370
 --- !u!1 &1599155439 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 07e7b594dc91cab4abfcf57199aa67c6, type: 3}
@@ -10722,6 +10722,46 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1664168895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7249194712414709883, guid: f0f411fb96519014197e4314ae1c6656, type: 3}
+  m_PrefabInstance: {fileID: 6585601108001628610}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1664168897
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664168895}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &1664168899
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664168895}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: eef3c22b95d44c1408f96593c0eb6b21, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: eef3c22b95d44c1408f96593c0eb6b21, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &1673489215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12987,9 +13027,6 @@ MonoBehaviour:
   m_enemyTag: Enemy
   m_bulletPrefab: {fileID: 717775099236602367, guid: d7bc5cf48eae3284b8ecfa9092b4ed89, type: 3}
   m_firePoint: {fileID: 953400625798645619}
-  m_partToRotate: {fileID: 470777402}
-  m_turnSpeed: 10
-  m_shootAnim: {fileID: 0}
   m_isOrbLauncher: 0
   _turretSettings: {fileID: 0}
   _models: []
@@ -12997,8 +13034,8 @@ MonoBehaviour:
   _turretBluePrint:
     m_prefab: {fileID: 0}
     m_cost: 0
-    m_upgradedPrefab: {fileID: 0}
-    m_upgradeCost: 0
+    _upgradeOneCost: 0
+    _upgradeTwoCost: 0
 --- !u!1 &2056568917
 GameObject:
   m_ObjectHideFlags: 0
@@ -29500,9 +29537,6 @@ MonoBehaviour:
   m_enemyTag: Enemy
   m_bulletPrefab: {fileID: 717775099236602367, guid: d7bc5cf48eae3284b8ecfa9092b4ed89, type: 3}
   m_firePoint: {fileID: 112194970769751070}
-  m_partToRotate: {fileID: 8819229095729387159}
-  m_turnSpeed: 10
-  m_shootAnim: {fileID: 0}
   m_isOrbLauncher: 0
   _turretSettings: {fileID: 0}
   _models: []
@@ -29510,8 +29544,8 @@ MonoBehaviour:
   _turretBluePrint:
     m_prefab: {fileID: 0}
     m_cost: 0
-    m_upgradedPrefab: {fileID: 0}
-    m_upgradeCost: 0
+    _upgradeOneCost: 0
+    _upgradeTwoCost: 0
 --- !u!1001 &6585601108001628610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29519,6 +29553,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6571260423993258447, guid: f0f411fb96519014197e4314ae1c6656, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585601106694614248, guid: f0f411fb96519014197e4314ae1c6656, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6585601108505893461, guid: f0f411fb96519014197e4314ae1c6656, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -29567,7 +29609,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrbTurret
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7405076474435342078, guid: f0f411fb96519014197e4314ae1c6656, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -4.500741
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8889359548194700993, guid: f0f411fb96519014197e4314ae1c6656, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f0f411fb96519014197e4314ae1c6656, type: 3}
 --- !u!33 &6823784905896202728
 MeshFilter:
@@ -30049,11 +30096,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8762421971482124809}
   m_Mesh: {fileID: 6403828546791056307, guid: 95323d22ad71efb4291866a192e8ed1e, type: 3}
---- !u!1 &8363758792608383769 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3787555271359162002, guid: 56ec781d779dfdd4b88d37cc8dca28fa, type: 3}
-  m_PrefabInstance: {fileID: 4648298916922287499}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &8427240230221429532
 MeshRenderer:
   m_ObjectHideFlags: 0

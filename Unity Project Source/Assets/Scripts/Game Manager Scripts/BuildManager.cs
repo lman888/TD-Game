@@ -112,7 +112,8 @@ public class BuildManager : MonoBehaviour
     public void SellTurret(Node _node)
     {
         /* Get the TurretBluePrint that is on this object */
-        _currency.SellMoney(_node.GetTurretBluePrintType());
+        _currency.SellMoney(_node);
+
         _node.ClearSpot();
 
         //Spawn a Cool Effect when turret is sold

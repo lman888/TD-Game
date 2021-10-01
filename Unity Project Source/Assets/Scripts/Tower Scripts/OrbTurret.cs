@@ -35,8 +35,6 @@ public class OrbTurret : MonoBehaviour
     private GameObject m_bulletPrefab;
     [SerializeField]
     private Transform m_firePoint;
-    [SerializeField]
-    private Animation m_shootAnim;
     public bool m_isOrbLauncher;
 
     [SerializeField]
@@ -57,6 +55,11 @@ public class OrbTurret : MonoBehaviour
     public int GetCurrentLevel()
     {
         return _currentLevel;
+    }
+
+    public int GetMaxLevel()
+    {
+        return _upgradeDetails.Level;
     }
 
     private void Start()
@@ -153,10 +156,6 @@ public class OrbTurret : MonoBehaviour
         {
             if (m_fireCountDown <= 0)
             {
-                if (m_shootAnim != null)
-                {
-                    m_shootAnim.Play();
-                }
                 Shoot();
                 m_fireCountDown = 1f / _fireRate;
             }
@@ -207,11 +206,6 @@ public class OrbTurret : MonoBehaviour
     {
         if (m_fireCountDown <= 0)
         {
-            if (m_shootAnim != null)
-            {
-                m_shootAnim.Play();
-            }
-
             GameObject m_bulletGameObject = Instantiate(m_bulletPrefab, m_firePoint.position, m_firePoint.rotation);
             _bullet = m_bulletGameObject.GetComponent<Bullet>();
 
@@ -256,11 +250,6 @@ public class OrbTurret : MonoBehaviour
     {
         Debug.Log("Turret Upgraded");
     }
-
-    //Vector3 UpdateTurretPosition()
-    //{
-    //    return transform.position;
-    //}
 
     private void SetModelForUpgrade(int level)
     {
